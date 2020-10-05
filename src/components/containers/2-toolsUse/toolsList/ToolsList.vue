@@ -11,7 +11,7 @@
         <b-tooltip
           :target="fa.class"
           placement="top"
-          triggers="hover click"
+          triggers="hover"
           custom-class="custom-tooltip"
           >
           {{ fa.text }}
