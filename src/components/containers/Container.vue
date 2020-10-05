@@ -56,35 +56,28 @@ export default {
       const btns = document.querySelectorAll('.btn-first');
       const toolsFa = document.querySelectorAll('.tools-fa');
       const contactContent = document.querySelectorAll('.contact-content');
-      // const medias = document.querySelectorAll('.bulle');
 
-      // Pause des TimeLines
+      // Pause de la TimeLine
       const TLApp = gsap.timeline({ paused: true });
-      const TLPresentation = gsap.timeline({ paused: true });
-      const TLTools = gsap.timeline({ paused: true });
-      const TLContact = gsap.timeline({ paused: true });
 
       TLApp
-        .from(app, 0.5, { opacity: 0, ease: 'power2.out' })
-        .from(logo, 0.5, { transform: 'scale(0)', ease: 'power2.out' });
-      TLPresentation
+        .from(app, 0.25, { opacity: 0, ease: 'power2.out' })
+        .from(logo, 0.25, { transform: 'scale(0)', ease: 'power2.out' }, '-=0.25')
+        // Containers
         .from(presentation, 0.5, { opacity: 0, ease: 'power2.out' })
-        .staggerFrom(presTitle, 1, { top: -50, opacity: 0, ease: 'power2.out' }, 0.3)
-        .staggerFrom(btns, 1, { opacity: 0, ease: 'power2.out' }, 0.3);
-      //  .staggerFrom(medias, 1, { right: -500, ease: 'power2.out' }, 0.3, '-=1')
-      TLTools
-        .from(toolsUse, 0.5, { opacity: 0, ease: 'power2.out' })
-        .staggerFrom(toolsTitle, 1, { top: -50, opacity: 0, ease: 'power2.out' }, 0.3)
-        .staggerFrom(toolsFa, 1, { opacity: 0, ease: 'power2.out' }, 0.3);
-      TLContact
-        .from(contact, 0.5, { opacity: 0, ease: 'power2.out' })
-        .staggerFrom(contactTitle, 1, { top: -50, opacity: 0, ease: 'power2.out' }, 0.3)
-        .staggerFrom(contactContent, 1, { opacity: 0, ease: 'power2.out' }, 0.3);
+        .from(toolsUse, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.5')
+        .from(contact, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.5')
+        // Titles
+        .staggerFrom(presTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1)
+        .staggerFrom(toolsTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
+        .staggerFrom(contactTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
+        // Contents
+        .staggerFrom(btns, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1)
+        .staggerFrom(toolsFa, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
+        .staggerFrom(contactContent, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5');
+
       // Let's go !
       TLApp.play();
-      TLPresentation.play();
-      TLTools.play();
-      TLContact.play();
     },
   },
 };

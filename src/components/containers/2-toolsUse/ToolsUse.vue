@@ -6,7 +6,7 @@
           <b-col cols="12" class="pt-4">
             <h2>
               <span>Outils </span><span>utilisés </span>
-              <span>pour </span><span>ce </span><span>projet :</span>
+              <span>pour </span><span>ce </span><span>projet </span><span>:</span>
             </h2>
           </b-col>
         </b-row>

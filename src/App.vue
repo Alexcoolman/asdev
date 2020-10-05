@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       loading: {
-        load: true,
+        load: false,
         welcome: false,
       },
       hover: false,
