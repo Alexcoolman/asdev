@@ -61,20 +61,21 @@ export default {
       const TLApp = gsap.timeline({ paused: true });
 
       TLApp
-        .from(app, 0.25, { opacity: 0, ease: 'power2.out' })
-        .from(logo, 0.25, { transform: 'scale(0)', ease: 'power2.out' }, '-=0.25')
-        // Containers
+        .from(app, 0.3, { opacity: 0, ease: 'power2.out' })
+        .from(logo, 0.3, { transform: 'scale(0)', ease: 'power2.out' }, '-=0.3')
+        // Containers +0.3s
         .from(presentation, 0.5, { opacity: 0, ease: 'power2.out' })
-        .from(toolsUse, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.5')
-        .from(contact, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.5')
-        // Titles
-        .staggerFrom(presTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1)
-        .staggerFrom(toolsTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
-        .staggerFrom(contactTitle, 0.5, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
-        // Contents
-        .staggerFrom(btns, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1)
-        .staggerFrom(toolsFa, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5')
-        .staggerFrom(contactContent, 0.5, { opacity: 0, ease: 'power2.out' }, 0.1, '-=0.5');
+        .from(toolsUse, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.25')
+        .from(contact, 0.5, { opacity: 0, ease: 'power2.out' }, '-=0.25')
+        // Presentation +1s
+        .staggerFrom(presTitle, 0.4, { top: -50, opacity: 0, ease: 'power2.out' }, 0.05, '-=0.75')
+        .staggerFrom(btns, 0.5, { opacity: 0, ease: 'power2.out' }, 0.25, '-=0.35')
+        // Tools +1.15s
+        .staggerFrom(toolsTitle, 0.4, { top: -50, opacity: 0, ease: 'power2.out' }, 0.05, '-=0.60')
+        .staggerFrom(toolsFa, 0.75, { opacity: 0, ease: 'power2.out' }, 0.066, '-=0.15')
+        // Contact +1.65
+        .staggerFrom(contactTitle, 0.4, { top: -50, opacity: 0, ease: 'power2.out' }, 0.1, '-=0.35')
+        .staggerFrom(contactContent, 0.5, { opacity: 0, ease: 'power2.out' }, 0.25, '-=0.15');
 
       // Let's go !
       TLApp.play();
