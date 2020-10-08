@@ -35,6 +35,7 @@ export default {
 .tools-use {
   border: 1px solid $green;
   box-shadow: 0 0 30px 0 $green-50;
+  border-radius: 15px;
   color: $green;
   background: $black;
   background-color: $black;

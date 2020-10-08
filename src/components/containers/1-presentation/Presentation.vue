@@ -18,21 +18,21 @@
                 <a
                   href="#"
                   v-scroll-to="{ element: '#tools', duration: 500 }"
-                  class="as-btn b1 mx-2">Outils
+                  class="as-btn my-2 px-5">Outils
                 </a>
               </b-col>
               <b-col cols="12" sm="4" class="d-flex mb-3">
                 <a
                   href="#"
                   v-scroll-to="{ element: '#projects', duration: 500 }"
-                  class="as-btn b1 mx-2">Projects
+                  class="as-btn my-2 px-5">Projects
                 </a>
               </b-col>
               <b-col cols="12" sm="4" class="d-flex mb-3">
                 <a
                 href="#"
                 v-scroll-to="{ element: '#contact', duration: 1000 }"
-                class="as-btn b2 mx-2">Contact
+                class="as-btn my-2 px-5">Contact
               </a>
               </b-col>
             </b-row>
@@ -58,6 +58,7 @@ export default {
 .presentation {
   border: 1px solid $green;
   box-shadow: 0 0 30px 0 $green-50;
+  border-radius: 15px;
   color: $green;
   background: $black;
   background-color: $black;

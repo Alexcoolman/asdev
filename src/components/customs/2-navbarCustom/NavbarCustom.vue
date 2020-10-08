@@ -41,6 +41,7 @@ export default {
   border-bottom: 1px solid $green;
   -webkit-filter: drop-shadow($green-shadow);
   filter: drop-shadow($green-shadow);
+  border-radius:  0 0 15px 15px;
 }
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
