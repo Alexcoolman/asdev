@@ -1,7 +1,7 @@
 <template>
   <main>
     <NavbarCustom></NavbarCustom>
-    <b-container class="full-content">
+    <b-container fluid class="full-content">
       <section id="presentation">
         <Presentation></Presentation>
       </section>

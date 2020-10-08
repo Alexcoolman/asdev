@@ -1,7 +1,7 @@
 <template>
   <b-row align-h="around">
     <b-col cols="11">
-      <b-container class="projects my-4">
+      <b-container fluid class="projects my-4">
         <b-row align-h="center">
           <b-col cols="12" class="text-center pt-4">
             <h2>
