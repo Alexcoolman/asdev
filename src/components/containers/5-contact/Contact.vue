@@ -12,20 +12,42 @@
         <b-row>
           <b-col cols="12" class="py-5 pl-4">
             <div class="contact-content">
-              <font-awesome-icon
-                :icon="['fas', 'paper-plane']"
-                class="contact-fa"
-                id='paper-plane'
-              />
-              Mail: <a href="mailto:a*s@as.com">a*s@as.com</a>
+              <b-row align-v="center" class="text-center">
+                <b-col cols="5" sm="6">
+                  <b-col cols="12">
+                    <font-awesome-icon
+                      :icon="['fas', 'paper-plane']"
+                      class="contact-fa fa-3x mail"
+                      id='paper-plane'
+                    />
+                  </b-col>
+                  <b-col cols="12">
+                    Mail
+                  </b-col>
+                </b-col>
+                <b-col cols="7" sm="6">
+                  <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
+                </b-col>
+              </b-row>
             </div>
             <div class="contact-content">
-              <font-awesome-icon
-                :icon="['fab', 'linkedin']"
-                class="contact-fa"
-                id='linkedin'
-              />
-              LinkedIn: <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
+              <b-row align-v="center" class="text-center">
+                <b-col cols="5" sm="6">
+                  <b-col cols="12">
+                    <font-awesome-icon
+                      :icon="['fab', 'linkedin']"
+                      class="contact-fa fa-3x linkedin"
+                      id='linkedin'
+                    />
+                  </b-col>
+                  <b-col cols="12">
+                    LinkedIn
+                  </b-col>
+                </b-col>
+                <b-col cols="7" sm="6">
+                  <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
+                </b-col>
+              </b-row>
             </div>
           </b-col>
         </b-row>
@@ -40,7 +62,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .contact {
   border: 1px solid $green;
   box-shadow: 0 0 30px 0 $green-50;
@@ -69,5 +91,11 @@ a:hover {
   background-image:     -ms-radial-gradient(circle, rgba(98,255,98,1) 0%, rgba(255,0,0,1) 100%);
   background-image:      -o-radial-gradient(circle, rgba(98,255,98,1) 0%, rgba(255,0,0,1) 100%);
   background-image:         radial-gradient(circle, rgba(98,255,98,1) 0%, rgba(255,0,0,1) 100%);
+}
+.linkedin:hover {
+  color: $linked-in;
+}
+.mail:hover {
+  color: $green-80;
 }
 </style>

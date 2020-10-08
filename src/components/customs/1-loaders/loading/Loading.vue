@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .blackbg {
   background: $black;
   background-color: $black;

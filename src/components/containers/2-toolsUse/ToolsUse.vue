@@ -5,8 +5,8 @@
         <b-row align-h="center">
           <b-col cols="12" class="pt-4">
             <h2>
-              <span>Outils </span><span>utilisés </span>
-              <span>pour </span><span>ce </span><span>projet </span><span>:</span>
+              <span>Mes </span><span>Outils </span>
+              <span>de </span><span>travail </span>
             </h2>
           </b-col>
         </b-row>
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .tools-use {
   border: 1px solid $green;
   box-shadow: 0 0 30px 0 $green-50;

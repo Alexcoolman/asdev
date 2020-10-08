@@ -48,6 +48,31 @@ export default {
   padding: 0;
 }
 
+/* LOGO */
+.logo {
+  background: $green;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow($green-shadow);
+  filter: drop-shadow($green-shadow);
+  cursor: pointer;
+}
+/* BUTTONS */
+.as-btn {
+  text-decoration: none;
+  border: 2px solid $green;
+  background: transparent;
+  white-space:nowrap;
+  padding: 20px;
+  width: 100%;
+  cursor: pointer;
+  color: $green;
+}
+.as-btn:hover{
+  transition: all 0.3s ease-in-out;
+  background: $green-80;
+  color: $black;
+}
+
 @font-face {
   font-family: "Anonymus Pro";
   src: url('./fonts/AnonymousPro-Regular.ttf') format("truetype");

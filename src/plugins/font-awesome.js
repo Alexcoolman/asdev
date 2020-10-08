@@ -4,15 +4,21 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import {
   faVuejs,
-  faJs,
+  faJsSquare,
   faHtml5,
   faCss3Alt,
   faSass,
   faBootstrap,
   faFontAwesome,
   faNodeJs,
+  faGrunt,
   faGit,
+  faNpm,
   faLinkedin,
+  faMedium,
+  faStackOverflow,
+  faApple,
+  faWindows,
 } from '@fortawesome/free-brands-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -23,15 +29,21 @@ library.add(
   faPaperPlane,
   // FA Brand
   faVuejs,
-  faJs,
+  faJsSquare,
   faHtml5,
   faCss3Alt,
   faSass,
   faBootstrap,
   faFontAwesome,
   faNodeJs,
+  faGrunt,
   faGit,
+  faNpm,
+  faMedium,
+  faStackOverflow,
   faLinkedin,
+  faApple,
+  faWindows,
 );
 
 // Add Font Awesome to Vue

@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .bloc {
   background: $black;
   background-color: $black;

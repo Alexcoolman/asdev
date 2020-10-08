@@ -12,7 +12,11 @@
       <b-navbar-nav>
         <b-nav-item
           href="#"
-          v-scroll-to="{ element: '#tools', duration: 500 }">Projets
+          v-scroll-to="{ element: '#tools', duration: 500 }">Outils
+        </b-nav-item>
+        <b-nav-item
+          href="#"
+          v-scroll-to="{ element: '#projects', duration: 500 }">Projets
         </b-nav-item>
         <b-nav-item
           href="#"
@@ -30,13 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-.logo {
-  background: $green;
-  border-radius: 50%;
-  -webkit-filter: drop-shadow($green-shadow);
-  filter: drop-shadow($green-shadow);
-  cursor: pointer;
-}
 .navbar-custom {
   background-color: $black;
   border-left: 1px solid $green;

@@ -32,7 +32,7 @@ export default {
         },
         {
           text: 'JavaScript',
-          class: 'js',
+          class: 'js-square',
         },
         {
           text: 'HTML 5',
@@ -59,8 +59,32 @@ export default {
           class: 'node-js',
         },
         {
+          text: 'Grunt',
+          class: 'grunt',
+        },
+        {
           text: 'Git',
           class: 'git',
+        },
+        {
+          text: 'NPM',
+          class: 'npm',
+        },
+        {
+          text: 'Medium',
+          class: 'medium',
+        },
+        {
+          text: 'Stack Overflow',
+          class: 'stack-overflow',
+        },
+        {
+          text: 'Apple',
+          class: 'apple',
+        },
+        {
+          text: 'Windows',
+          class: 'windows',
         },
       ],
     };
@@ -86,7 +110,7 @@ export default {
 .vuejs:hover {
   color: $vue;
 }
-.js:hover {
+.js-square:hover {
   color: $javascript;
 }
 .html5:hover {
@@ -104,18 +128,32 @@ export default {
 .node-js:hover {
   color: $node;
 }
-
 .react:hover {
   color: $react;
-}
-.vuejs:hover {
-  color: $vue;
 }
 .font-awesome:hover {
   color: $font-awesome;
 }
+.grunt:hover {
+  color: $grunt;
+}
 .git:hover {
   color: $git;
+}
+.npm:hover {
+  color: $npm;
+}
+.medium:hover {
+  color: $white;
+}
+.stack-overflow:hover {
+  color: $stackoverflow;
+}
+.apple:hover {
+  color: $white;
+}
+.windows:hover {
+  color: $windows;
 }
 .sql:hover {
   color: $sql;

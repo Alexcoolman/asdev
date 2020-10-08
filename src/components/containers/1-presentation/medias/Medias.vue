@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .medias {
   list-style-type: none;
 }
