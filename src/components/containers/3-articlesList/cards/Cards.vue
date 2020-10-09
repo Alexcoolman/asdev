@@ -8,7 +8,7 @@
       <p class="card-text p-4">Site personnel permettant de présenter mes compétences</p>
       <div class="py-3"><a
         href="http://zealous-mayer-f64e34.netlify.app/"
-        class="as-btn px-5">Voir le site
+        class="as-btn px-4">Voir le site
       </a></div>
     </div>
   </article>
