@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" class="navbar navbar-expand-lg navbar-custom mx-4">
+  <b-navbar toggleable="lg" class="navbar navbar-expand-lg navbar-custom mx-4 mb-4">
 
     <b-navbar-brand href="#">
       <img src="../../../assets/AS_Logo.png" width="60" height="60" title="AS Logo"
@@ -48,13 +48,14 @@ export default {
   color: rgba(0,255,0,.8);
 }
 .navbar-custom .navbar-nav .nav-link {
-  color: $green-50;
+  color: $green-50 !important;
 }
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
   color: $green;
 }
- .custom-toggler .navbar-toggler-icon {
+
+.custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,255,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
  .custom-toggler .navbar-toggler-icon:hover,

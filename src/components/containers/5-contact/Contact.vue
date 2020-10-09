@@ -13,7 +13,7 @@
           <b-col cols="12" class="py-5 pl-4">
             <div class="contact-content">
               <b-row align-v="center" class="text-center">
-                <b-col cols="5" sm="6">
+                <b-col cols="4" sm="6">
                   <b-col cols="12">
                     <font-awesome-icon
                       :icon="['fas', 'paper-plane']"
@@ -21,18 +21,18 @@
                       id='paper-plane'
                     />
                   </b-col>
-                  <b-col cols="12">
+                  <b-col cols="12" class="ico-info">
                     Mail
                   </b-col>
                 </b-col>
-                <b-col cols="7" sm="6">
+                <b-col cols="8" sm="6">
                   <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
                 </b-col>
               </b-row>
             </div>
             <div class="contact-content">
               <b-row align-v="center" class="text-center">
-                <b-col cols="5" sm="6">
+                <b-col cols="4" sm="6">
                   <b-col cols="12">
                     <font-awesome-icon
                       :icon="['fab', 'linkedin']"
@@ -40,11 +40,11 @@
                       id='linkedin'
                     />
                   </b-col>
-                  <b-col cols="12">
+                  <b-col cols="12" class="ico-info">
                     LinkedIn
                   </b-col>
                 </b-col>
-                <b-col cols="7" sm="6">
+                <b-col cols="8" sm="6">
                   <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
                 </b-col>
               </b-row>
@@ -98,5 +98,8 @@ a:hover {
 }
 .mail:hover {
   color: $green-80;
+}
+.ico-info {
+  font-size: 11px;
 }
 </style>

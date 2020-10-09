@@ -58,6 +58,7 @@ export default {
 }
 /* BUTTONS */
 .as-btn {
+  text-align: center;
   text-decoration: none;
   border: 2px solid $green;
   background: transparent;
