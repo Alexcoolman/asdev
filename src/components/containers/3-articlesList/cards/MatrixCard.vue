@@ -20,14 +20,6 @@ export default {
       type: String,
       default: 'card',
     },
-    height: {
-      type: Number,
-      default: 0,
-    },
-    width: {
-      type: Number,
-      default: 0,
-    },
     fontSize: {
       type: Number,
       default: 10,
@@ -44,8 +36,8 @@ export default {
       const ctx = matrix.getContext('2d');
 
       // Make the canvas full size of the box
-      matrix.style.width = self.width || '100%';
-      matrix.style.height = self.height || '100%';
+      matrix.style.width = '100%';
+      matrix.style.height = '100%';
       matrix.width = matrix.offsetWidth;
       matrix.height = matrix.offsetHeight;
 
