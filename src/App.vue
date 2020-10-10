@@ -62,13 +62,14 @@ export default {
   text-decoration: none;
   border: 2px solid $green;
   background: transparent;
-  white-space:nowrap;
+  white-space: nowrap;
   padding: 20px;
   width: 100%;
   cursor: pointer;
   color: $green;
 }
 .as-btn:hover{
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
   background: $green-80;
   color: $black;

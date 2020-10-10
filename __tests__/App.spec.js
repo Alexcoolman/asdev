@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
+import Loading from '@/components/customs/1-loaders/loading/Loading.vue';
+import Welcome from '@/components/customs/1-loaders/welcome/Welcome.vue';
+import Container from '@/components/containers/Container.vue';
 import App from '../src/App.vue';
-import Loading from '../src/components/loading/Loading.vue';
-import Welcome from '../src/components/welcome/Welcome.vue';
-import Container from '../src/components/container/Container.vue';
 
 let wrapper = null;
 
@@ -20,10 +20,9 @@ afterEach(() => {
 });
 
 describe('App', () => {
-  // DIVS
   it('renders the App div', () => {
-    const divs = wrapper.findAll('#app');
-    expect(divs.length).toBe(1);
+    const app = wrapper.findAll('#app');
+    expect(app.length).toBe(1);
   });
 
   // COMPONENTS
