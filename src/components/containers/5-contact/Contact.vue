@@ -2,53 +2,66 @@
   <b-row align-h="around">
     <b-col cols="11">
       <b-container fluid class="contact my-4">
-        <b-row align-h="center">
-          <b-col cols="12" class="text-center pt-4">
-            <h2>
-              <span>Contact</span>
-            </h2>
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col cols="12" class="py-5 pl-4">
-            <div class="contact-content">
-              <b-row align-v="center" class="text-center">
-                <b-col cols="4" sm="6">
-                  <b-col cols="12">
-                    <font-awesome-icon
-                      :icon="['fas', 'paper-plane']"
-                      class="contact-fa fa-3x mail"
-                      id='paper-plane'
-                    />
+        <b-row align-h="center" align-v="center">
+          <b-col cols="12">
+            <b-row align-h="center">
+              <b-col cols="12" class="text-center pt-4">
+                <h2>
+                  <span>Contact</span>
+                </h2>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="12" class="pb-5 pl-4">
+                <b-row align-h="center" align-v="center">
+                  <b-col cols="12" class="text-center p-4">
+                    <img
+                    src="../../../assets/AS_Logo_dirisi.png"
+                    width="250" height="250" title="AS Logo"
+                    class="d-inline-block align-top logo"
+                    alt="logo" loading="lazy">
                   </b-col>
-                  <b-col cols="12" class="ico-info">
-                    Mail
-                  </b-col>
-                </b-col>
-                <b-col cols="8" sm="6">
-                  <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
-                </b-col>
-              </b-row>
-            </div>
-            <div class="contact-content">
-              <b-row align-v="center" class="text-center">
-                <b-col cols="4" sm="6">
-                  <b-col cols="12">
-                    <font-awesome-icon
-                      :icon="['fab', 'linkedin']"
-                      class="contact-fa fa-3x linkedin"
-                      id='linkedin'
-                    />
-                  </b-col>
-                  <b-col cols="12" class="ico-info">
-                    LinkedIn
-                  </b-col>
-                </b-col>
-                <b-col cols="8" sm="6">
-                  <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
-                </b-col>
-              </b-row>
-            </div>
+                </b-row>
+                <div class="contact-content">
+                  <b-row align-v="center" class="text-center">
+                    <b-col cols="4" sm="6">
+                      <b-col cols="12">
+                        <font-awesome-icon
+                          :icon="['fas', 'paper-plane']"
+                          class="contact-fa fa-3x mail"
+                          id='paper-plane'
+                        />
+                      </b-col>
+                      <b-col cols="12" class="ico-info">
+                        Mail
+                      </b-col>
+                    </b-col>
+                    <b-col cols="8" sm="6">
+                      <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
+                    </b-col>
+                  </b-row>
+                </div>
+                <div class="contact-content">
+                  <b-row align-v="center" class="text-center">
+                    <b-col cols="4" sm="6">
+                      <b-col cols="12">
+                        <font-awesome-icon
+                          :icon="['fab', 'linkedin']"
+                          class="contact-fa fa-3x linkedin"
+                          id='linkedin'
+                        />
+                      </b-col>
+                      <b-col cols="12" class="ico-info">
+                        LinkedIn
+                      </b-col>
+                    </b-col>
+                    <b-col cols="8" sm="6">
+                      <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
+                    </b-col>
+                  </b-row>
+                </div>
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
       </b-container>

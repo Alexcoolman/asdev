@@ -2,7 +2,7 @@
   <b-navbar toggleable="lg" class="navbar navbar-expand-lg navbar-custom mx-4 mb-4">
 
     <b-navbar-brand href="#">
-      <img src="../../../assets/AS_Logo.png" width="60" height="60" title="AS Logo"
+      <img src="../../../assets/AS_Logo_dirisi.png" width="75" height="75" title="AS Logo"
         class="d-inline-block align-top logo" alt="logo" loading="lazy">
     </b-navbar-brand>
 

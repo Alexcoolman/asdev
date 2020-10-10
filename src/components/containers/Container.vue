@@ -102,6 +102,6 @@ export default {
   height: auto;
 }
 .full-content {
-  min-height: calc(100vh - 148px);
+  min-height: calc(100vh - 164px);
 }
 </style>
