@@ -16,7 +16,7 @@
         </b-nav-item>
         <b-nav-item
           href="#"
-          v-scroll-to="{ element: '#projects', duration: 500 }">Projets
+          v-scroll-to="{ element: '#projects', duration: 800 }">Projets
         </b-nav-item>
         <b-nav-item
           href="#"

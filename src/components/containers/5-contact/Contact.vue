@@ -1,65 +1,70 @@
 <template>
   <b-row align-h="around">
     <b-col cols="11">
-      <b-container fluid class="contact my-4">
+      <b-container fluid class="section-container-fluid contact my-4">
         <b-row align-h="center" align-v="center">
           <b-col cols="12">
             <b-row align-h="center">
               <b-col cols="12" class="text-center pt-4">
                 <h2>
-                  <span>Contact</span>
+                  <span>
+                    <font-awesome-icon
+                      :icon="['fas', 'at']"
+                      class="title-fa"
+                      id='at'
+                    />
+                  </span>
+                  <span> Contact</span>
                 </h2>
               </b-col>
             </b-row>
-            <b-row>
-              <b-col cols="12" class="pb-5 pl-4">
-                <b-row align-h="center" align-v="center">
+            <b-row align-h="center" align-v="center">
+              <b-col cols="12" sm="6">
+                <b-row>
                   <b-col cols="12" class="text-center p-4">
                     <img
                     src="../../../assets/AS_Logo_dirisi.png"
                     width="250" height="250" title="AS Logo"
-                    class="d-inline-block align-top logo"
+                    class="d-inline-block align-top logo contact-logo"
                     alt="logo" loading="lazy">
                   </b-col>
                 </b-row>
-                <div class="contact-content">
-                  <b-row align-v="center" class="text-center">
-                    <b-col cols="4" sm="6">
-                      <b-col cols="12">
-                        <font-awesome-icon
-                          :icon="['fas', 'paper-plane']"
-                          class="contact-fa fa-3x mail"
-                          id='paper-plane'
-                        />
-                      </b-col>
-                      <b-col cols="12" class="ico-info">
-                        Mail
-                      </b-col>
+              </b-col>
+              <b-col cols="12" sm="6">
+                <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
+                  <b-col cols="4">
+                    <b-col cols="12">
+                      <font-awesome-icon
+                        :icon="['fas', 'paper-plane']"
+                        class="contact-fa fa-3x mail"
+                        id='paper-plane'
+                      />
                     </b-col>
-                    <b-col cols="8" sm="6">
-                      <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
+                    <b-col cols="12" class="ico-info">
+                      Mail
                     </b-col>
-                  </b-row>
-                </div>
-                <div class="contact-content">
-                  <b-row align-v="center" class="text-center">
-                    <b-col cols="4" sm="6">
-                      <b-col cols="12">
-                        <font-awesome-icon
-                          :icon="['fab', 'linkedin']"
-                          class="contact-fa fa-3x linkedin"
-                          id='linkedin'
-                        />
-                      </b-col>
-                      <b-col cols="12" class="ico-info">
-                        LinkedIn
-                      </b-col>
+                  </b-col>
+                  <b-col cols="8">
+                    <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
+                  </b-col>
+                </b-row>
+                <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
+                  <b-col cols="4">
+                    <b-col cols="12">
+                      <font-awesome-icon
+                        :icon="['fab', 'linkedin']"
+                        class="contact-fa fa-3x linkedin"
+                        id='linkedin'
+                      />
                     </b-col>
-                    <b-col cols="8" sm="6">
-                      <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
+                    <b-col cols="12" class="ico-info">
+                      LinkedIn
                     </b-col>
-                  </b-row>
-                </div>
+                  </b-col>
+                  <b-col cols="8">
+                    <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
+                  </b-col>
+                </b-row>
               </b-col>
             </b-row>
           </b-col>
@@ -76,19 +81,6 @@ export default {
 </script>
 
 <style lang="scss">
-.contact {
-  border: 1px solid $green;
-  box-shadow: 0 0 30px 0 $green-50;
-  border-radius: 15px;
-  color: $green;
-  background: $black;
-  background-color: $black;
-  overflow-wrap: break-word;
-}
-h2 span {
-  position: relative;
-  line-break: wrap;
-}
 .contact-fa {
   color: $green;
 }

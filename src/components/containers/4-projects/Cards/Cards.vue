@@ -1,5 +1,5 @@
 <template>
-  <article class="p-4 mb-2">
+  <article class="projects-cards p-4 mb-2">
     <div class="card-top">
       <MatrixCard :id="this.id"></MatrixCard>
     </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import MatrixCard from '@/components/containers/3-articlesList/cards/MatrixCard.vue';
+import MatrixCard from '@/components/containers/4-projects/Cards/MatrixCard.vue';
 
 export default {
   name: 'cards',

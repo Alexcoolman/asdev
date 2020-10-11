@@ -1,7 +1,13 @@
 import Vue from 'vue';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapSigns,
+  faTools,
+  faCode,
+  faAt,
+  faPaperPlane,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faVuejs,
   faJsSquare,
@@ -26,6 +32,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // Add Solid & Brands to Font Awesome
 library.add(
   // FA Solid
+  faMapSigns,
+  faTools,
+  faCode,
+  faAt,
   faPaperPlane,
   // FA Brand
   faVuejs,

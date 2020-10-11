@@ -1,41 +1,31 @@
 <template>
   <b-row align-h="around">
     <b-col cols="11">
-      <b-container fluid class="presentation my-4">
-        <b-row>
-          <b-col cols="12" class="p-4">
+      <b-container fluid class="section-container-fluid presentation mb-4">
+        <b-row cols="1"
+        class="full-content-presentation text-center" align-h="center" align-v="center">
+          <b-col>
             <h2>
-              <span>Hello</span> <span>World!</span><span>👋</span>
+              <span>Hello</span><span> World!</span><span>👋</span>
             </h2>
+          </b-col>
+          <b-col>
             <h2>
               <span>Alexandre</span><span>,</span>
             </h2>
+          </b-col>
+          <b-col>
             <h2>
-              <span>WEB </span><span>Développeur </span><span>👨🏻‍💻</span>
+              <span>WEB</span><span> Développeur</span>
             </h2>
-            <b-row class="container-btns mt-5">
-              <b-col cols="12" sm="4" class="d-flex mb-3">
-                <a
-                  href="#"
-                  v-scroll-to="{ element: '#tools', duration: 500 }"
-                  class="as-btn my-2 px-5">Outils
-                </a>
-              </b-col>
-              <b-col cols="12" sm="4" class="d-flex mb-3">
-                <a
-                  href="#"
-                  v-scroll-to="{ element: '#projects', duration: 500 }"
-                  class="as-btn my-2 px-5">Projects
-                </a>
-              </b-col>
-              <b-col cols="12" sm="4" class="d-flex mb-3">
-                <a
-                href="#"
-                v-scroll-to="{ element: '#contact', duration: 1000 }"
-                class="as-btn my-2 px-5">Contact
-              </a>
-              </b-col>
-            </b-row>
+          </b-col>
+          <b-col>
+            <h2>
+              <span>👨🏻‍💻</span>
+            </h2>
+          </b-col>
+          <b-col>
+            <div class='mouse-scroll'></div>
           </b-col>
         </b-row>
       </b-container>
@@ -44,40 +34,51 @@
 </template>
 
 <script>
-// import Medias from '@/components/containers/1-presentation/medias/Medias.vue';
-
 export default {
   name: 'presentation',
-  components: {
-    // Medias,
-  },
 };
 </script>
 
 <style lang="scss">
-.presentation {
-  border: 1px solid $green;
-  box-shadow: 0 0 30px 0 $green-50;
-  border-radius: 15px;
-  color: $green;
-  background: $black;
-  background-color: $black;
-  overflow-wrap: break-word;
+.full-content-presentation {
+  min-height: calc(100vh - 150px);
 }
-h2 span {
+.mouse-scroll {
   position: relative;
+  left: 50%;
 }
-@media all and (max-device-width: 480px) {
-  .medias {
-    position: relative;
-    top: 0%;
-    transform: translate(0%);
+.mouse-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.mouse-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 80%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px $green-80;
+  border-radius: 25px;
+}
+.mouse-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: $green;
+  margin-left: -4px;
+  top: 54px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
   }
-  .presentation {
-    text-align: center;
-  }
-  .container-btns {
-    justify-content: space-around;
+  100% {
+    opacity: 0;
+    transform: translateY(-46px);
   }
 }
 </style>
