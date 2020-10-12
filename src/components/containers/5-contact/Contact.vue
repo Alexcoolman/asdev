@@ -7,14 +7,14 @@
             <b-row align-h="center">
               <b-col cols="12" class="text-center pt-4">
                 <h2>
-                  <span>
-                    <font-awesome-icon
-                      :icon="['fas', 'at']"
-                      class="title-fa"
-                      id='at'
-                    />
-                  </span>
-                  <span> Contact</span>
+                  <font-awesome-icon
+                    :icon="['fas', 'at']"
+                    class="title-fa"
+                    id='at'
+                  />
+                </h2>
+                <h2>
+                  Contact
                 </h2>
               </b-col>
             </b-row>

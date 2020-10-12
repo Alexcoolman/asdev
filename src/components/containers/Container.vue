@@ -66,24 +66,28 @@ export default {
       const contact = document.querySelector('.contact');
       // 2 - Containers titles
       const presTitle = document.querySelectorAll('.presentation h2 span');
-      const shortcutsTitle = document.querySelectorAll('.shortcuts h2 span');
-      const toolsTitle = document.querySelectorAll('.tools-use h2 span');
-      const projectsTitle = document.querySelectorAll('.projects h2 span');
-      const contactTitle = document.querySelectorAll('.contact h2 span');
+      const shortcutsFa = document.querySelectorAll('.shortcuts h2')[0];
+      const shortcutsTitle = document.querySelectorAll('.shortcuts h2')[1];
+      const toolsFa = document.querySelectorAll('.tools-use h2')[0];
+      const toolsTitle = document.querySelectorAll('.tools-use h2')[1];
+      const projectsFa = document.querySelectorAll('.projects h2')[0];
+      const projectsTitle = document.querySelectorAll('.projects h2')[1];
+      const contactFa = document.querySelectorAll('.contact h2')[0];
+      const contactTitle = document.querySelectorAll('.contact h2')[1];
       // 3 - Containers content
       const mouseScroll = document.querySelector('.mouse-scroll');
       const shortcutBtns = document.querySelectorAll('.shortcut-btn');
-      const toolsFa = document.querySelectorAll('.tools-fa');
-      const projectsCars = document.querySelectorAll('.projects-cards');
+      const toolsContent = document.querySelectorAll('.tools-fa');
+      const projectsCards = document.querySelectorAll('.projects-cards');
 
       // Création et pause de la TimeLine
       const TLApp = gsap.timeline({ paused: true });
-      // Ajout de ScrollTrigger
+      // Add ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
       ScrollTrigger.defaults({
-        toggleActions: 'restart complete reverse reset',
+        toggleActions: 'restart pause resume reverse',
       });
-      // Ajout des animations
+      // Add animations
       TLApp
         // App
         .from(app, 0.5, { opacity: 0, ease: 'power2.out' })
@@ -91,161 +95,203 @@ export default {
         // 1 - Présentation
         .from(presentation, 0.5, { opacity: 0, ease: 'power2.out' })
         .staggerFrom(presTitle, 0.5, { top: -60, opacity: 0, ease: 'power2.out' }, 0.1)
-        .from(mouseScroll, 2.5, { y: -100, opacity: 0, ease: 'bounce' })
-        // 2 - Shortcuts IN
-        .from(shortcuts, {
+        .from(mouseScroll, 1.5, { y: -100, opacity: 0, ease: 'bounce' });
+      // // Let's go !
+      TLApp.play();
+      // 2 - Shortcuts - Container
+      gsap.from(shortcuts, {
+        scrollTrigger: {
+          trigger: shortcuts,
+          id: 'shortcuts',
+          markers: false,
+          start: 'top 100%',
+          end: 'top 80%',
+          scrub: true,
+        },
+        opacity: 0,
+        ease: 'power2.in',
+      });
+      // 2 - Shortcuts - Titles
+      gsap.from(shortcutsFa, {
+        scrollTrigger: {
+          trigger: shortcutsFa,
+          id: 'shortcut-fa',
+          markers: false,
+          start: 'top 70%',
+        },
+        y: -100,
+        opacity: 0,
+        rotation: 360,
+        ease: 'bounce',
+      });
+      gsap.from(shortcutsTitle, {
+        scrollTrigger: {
+          trigger: shortcutsTitle,
+          id: 'shortcut-title',
+          markers: false,
+          start: 'top 70%',
+        },
+        y: -100,
+        opacity: 0,
+        ease: 'bounce',
+      });
+      // 2 - Shortcuts - Buttons
+      shortcutBtns.forEach((btn, i) => {
+        const rot = i % 2 === 0 ? 90 : 0;
+        const y = i % 2 === 0 ? 100 : 50;
+        gsap.from(btn, {
           scrollTrigger: {
-            trigger: shortcuts,
-            start: 'top 100%',
-            end: 'top 60%',
-            id: 'shortcuts',
-            scrub: true,
+            trigger: btn,
+            id: `shortcuts-btn${i + 1}`,
             markers: false,
-          },
-          opacity: 0,
-          ease: 'power2.in',
-        })
-        .staggerFrom(shortcutsTitle, 0.4, {
-          scrollTrigger: {
-            trigger: shortcutsTitle,
             start: 'top 80%',
-            end: 'top 50%',
-            id: 'shortcuts-title',
-            scrub: true,
-            markers: false,
           },
-          top: -80,
+          y,
+          rotation: i === 2 ? -rot : rot,
           opacity: 0,
           ease: 'power2.out',
+        });
+      });
+      // 3 - Tools - Container
+      gsap.from(toolsUse, {
+        scrollTrigger: {
+          trigger: toolsUse,
+          id: 'tools',
+          markers: false,
+          start: 'top 100%',
+          end: 'top 80%',
+          scrub: true,
         },
-        0.05)
-        .staggerFrom(shortcutBtns, 0.5, {
-          scrollTrigger: {
-            trigger: shortcuts,
-            start: 'top 70%',
-            end: 'top 50%',
-            id: 'shortcuts-btns',
-            scrub: true,
-            markers: false,
-          },
-          y: 100,
-          opacity: 0,
-          ease: 'power2.out',
+        opacity: 0,
+        ease: 'power2.in',
+      });
+      // 3 - Tools - Titles
+      gsap.from(toolsFa, {
+        scrollTrigger: {
+          trigger: toolsFa,
+          id: 'tools-fa',
+          markers: false,
+          start: 'top 70%',
         },
-        0.25)
-        // 2 - Shortcuts OUT
-        // 3 - Tools IN
-        .from(toolsUse, {
+        y: -100,
+        opacity: 0,
+        rotation: 360,
+        ease: 'bounce',
+      });
+      gsap.from(toolsTitle, {
+        scrollTrigger: {
+          trigger: toolsTitle,
+          id: 'tools-title',
+          markers: false,
+          start: 'top 70%',
+        },
+        y: -100,
+        opacity: 0,
+        ease: 'bounce',
+      });
+      // 3 - Tools - Content
+      toolsContent.forEach((fa, i) => {
+        gsap.from(fa, {
           scrollTrigger: {
-            trigger: toolsUse,
-            start: 'top 100%',
-            end: 'top 60%',
-            id: 'tools',
-            scrub: true,
+            trigger: fa,
+            id: `tools-content-fa${i + 1}`,
             markers: false,
-          },
-          opacity: 0,
-          ease: 'power2.in',
-        })
-        .staggerFrom(toolsTitle, 0.4, {
-          scrollTrigger: {
-            trigger: toolsTitle,
             start: 'top 80%',
-            end: 'top 50%',
-            id: 'tools-title',
-            scrub: true,
-            markers: false,
           },
-          y: 100,
+          y: 50,
           opacity: 0,
           ease: 'power2.out',
+        });
+      });
+      // 4 - Projects - Container
+      gsap.from(projects, {
+        scrollTrigger: {
+          trigger: projects,
+          id: 'projects',
+          markers: false,
+          start: 'top 100%',
+          end: 'top 80%',
+          scrub: true,
         },
-        0.05)
-        .staggerFrom(toolsFa, 0.75, {
-          scrollTrigger: {
-            trigger: toolsFa,
-            start: 'top 70%',
-            end: 'top 50%',
-            id: 'tools-fa',
-            scrub: true,
-            markers: false,
-          },
-          y: 100,
-          opacity: 0,
-          ease: 'power1.out',
+        opacity: 0,
+        ease: 'power2.in',
+      });
+      // 4 - Projetcs - Titles
+      gsap.from(projectsFa, {
+        scrollTrigger: {
+          trigger: projectsFa,
+          id: 'projects-fa',
+          markers: false,
+          start: 'top 70%',
         },
-        0.066)
-        // Tools OUT
-        // 4 - Projects
-        .from(projects, {
+        y: -100,
+        opacity: 0,
+        rotation: 360,
+        ease: 'bounce',
+      });
+      gsap.from(projectsTitle, {
+        scrollTrigger: {
+          trigger: projectsTitle,
+          id: 'projects-title',
+          markers: false,
+          start: 'top 70%',
+        },
+        y: -100,
+        opacity: 0,
+        ease: 'bounce',
+      });
+      // 4 - Projects - Content
+      projectsCards.forEach((cards, i) => {
+        gsap.from(cards, {
           scrollTrigger: {
-            trigger: projects,
-            start: 'top 100%',
-            end: 'top 60%',
-            id: 'projects',
-            scrub: true,
+            trigger: cards,
+            id: `cards-${i + 1}`,
             markers: false,
-          },
-          opacity: 0,
-          ease: 'power2.in',
-        })
-        .staggerFrom(projectsTitle, 0.4, {
-          scrollTrigger: {
-            trigger: projectsTitle,
             start: 'top 80%',
-            end: 'top 50%',
-            id: 'projects-title',
-            scrub: true,
-            markers: false,
-          },
-          top: -80,
-          opacity: 0,
-          ease: 'power2.out',
-        },
-        0.05)
-        .staggerFrom(projectsCars, 0.75, {
-          scrollTrigger: {
-            trigger: projectsCars,
-            start: 'top 70%',
-            end: 'top 50%',
-            id: 'projects-cards',
-            scrub: true,
-            markers: false,
           },
           y: 200,
           opacity: 0,
           ease: 'power2.out',
+        });
+      });
+      // 5 - Contact - Container
+      gsap.from(contact, {
+        scrollTrigger: {
+          trigger: contact,
+          id: 'contact',
+          markers: false,
+          start: 'top 100%',
+          end: 'top 80%',
+          scrub: true,
         },
-        0.066)
-        // 5 - Contact
-        .from(contact, {
-          scrollTrigger: {
-            trigger: contact,
-            start: 'top 100%',
-            end: 'top 60%',
-            id: 'contact',
-            scrub: true,
-            markers: false,
-          },
-          opacity: 0,
-          ease: 'power2.in',
-        })
-        .staggerFrom(contactTitle, 0.4, {
-          scrollTrigger: {
-            trigger: contactTitle,
-            start: 'top 80%',
-            end: 'top 50%',
-            id: 'contact-title',
-            scrub: true,
-            markers: false,
-          },
-          top: -80,
-          opacity: 0,
-          ease: 'power2.out',
+        opacity: 0,
+        ease: 'power2.in',
+      });
+      // 5 - Contact - Titles
+      gsap.from(contactFa, {
+        scrollTrigger: {
+          trigger: contactFa,
+          id: 'contact-fa',
+          markers: false,
+          start: 'top 70%',
         },
-        0.05);
-      // Let's go !
-      TLApp.play();
+        y: -100,
+        opacity: 0,
+        rotation: 360,
+        ease: 'bounce',
+      });
+      gsap.from(contactTitle, {
+        scrollTrigger: {
+          trigger: contactTitle,
+          id: 'contact-title',
+          markers: false,
+          start: 'top 70%',
+        },
+        y: -100,
+        opacity: 0,
+        ease: 'bounce',
+      });
+      // 5 - Contact - Content
     },
   },
 };
@@ -260,9 +306,6 @@ export default {
   background: $black;
   background-color: $black;
   overflow-wrap: break-word;
-}
-h2 span {
-  position: relative;
 }
 .full-content {
   min-height: calc(100vh - 164px);

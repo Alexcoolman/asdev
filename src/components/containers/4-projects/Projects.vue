@@ -5,14 +5,14 @@
         <b-row align-h="center">
           <b-col cols="12" class="text-center pt-4">
             <h2>
-              <span>
-                <font-awesome-icon
-                  :icon="['fas', 'code']"
-                  class="title-fa"
-                  id='code'
-                />
-              </span>
-              <span> Projets</span>
+              <font-awesome-icon
+                :icon="['fas', 'code']"
+                class="title-fa"
+                id='code'
+              />
+            </h2>
+            <h2>
+              Projets
             </h2>
           </b-col>
         </b-row>

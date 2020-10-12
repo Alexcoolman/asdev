@@ -5,15 +5,13 @@
         <b-row align-h="center">
           <b-col cols="12" class="pt-4">
             <h2>
-              <span>
-                <font-awesome-icon
-                  :icon="['fas', 'map-signs']"
-                  class="title-fa"
-                  id='map-signs'
-                />
-              </span>
-              <span> Raccourcies</span>
+              <font-awesome-icon
+                :icon="['fas', 'map-signs']"
+                class="title-fa"
+                id='map-signs'
+              />
             </h2>
+            <h2> Raccourcies</h2>
           </b-col>
         </b-row>
         <b-row class="container-btns p-4">

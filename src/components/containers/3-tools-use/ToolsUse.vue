@@ -5,17 +5,14 @@
         <b-row align-h="center" align-v="center">
           <b-col cols="12" class="pt-4">
             <h2>
-              <span>
-                <font-awesome-icon
-                  :icon="['fas', 'tools']"
-                  class="title-fa"
-                  id='tools'
-                />
-              </span>
-              <span> Mes</span>
-              <span> Outils</span>
-              <span> de</span>
-              <span> travail</span>
+              <font-awesome-icon
+                :icon="['fas', 'tools']"
+                class="title-fa"
+                id='tools'
+              />
+            </h2>
+            <h2>
+              Mes Outils de travail
             </h2>
           </b-col>
         </b-row>

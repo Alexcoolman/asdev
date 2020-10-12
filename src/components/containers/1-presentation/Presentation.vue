@@ -26,6 +26,9 @@
           </b-col>
           <b-col>
             <div class='mouse-scroll'></div>
+            <span class="text-black">
+              _
+            </span>
           </b-col>
         </b-row>
       </b-container>
@@ -80,5 +83,8 @@ export default {
     opacity: 0;
     transform: translateY(-46px);
   }
+}
+.text-black {
+  color: $black;
 }
 </style>
