@@ -11,7 +11,7 @@
                 id='map-signs'
               />
             </h2>
-            <h2> Raccourcies</h2>
+            <h2> Raccourcis</h2>
           </b-col>
         </b-row>
         <b-row class="container-btns p-4">
