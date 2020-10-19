@@ -8,7 +8,7 @@
 
     <b-navbar-toggle target="nav-collapse" class="custom-toggler"></b-navbar-toggle>
 
-    <b-collapse id="nav-collapse" is-nav class="justify-content-center">
+    <b-collapse id="nav-collapse" is-nav class="justify-content-end">
       <b-navbar-nav>
         <b-nav-item
           href="#"
