@@ -21,7 +21,7 @@
             <b-row align-h="center" align-v="center">
               <b-col cols="12" sm="6">
                 <b-row>
-                  <b-col cols="12" class="text-center p-5">
+                  <b-col cols="12" class="text-center p-4">
                     <img
                     src="../../../assets/AS_Logo_dirisi.png"
                     width="250" height="250" title="AS Logo"
