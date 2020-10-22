@@ -19,49 +19,49 @@
               </b-col>
             </b-row>
             <b-row align-h="center" align-v="center">
-              <b-col cols="12" sm="6">
+              <b-col cols="12" md="7">
                 <b-row>
                   <b-col cols="12" class="text-center p-4">
                     <img
                     src="../../../assets/AS_Logo_dirisi.png"
-                    width="250" height="250" title="AS Logo"
+                    width="200" height="200" title="AS Logo"
                     class="d-inline-block align-top logo contact-logo"
                     alt="logo" loading="lazy">
                   </b-col>
                 </b-row>
               </b-col>
-              <b-col cols="12" sm="6">
+              <b-col cols="12" md="5">
                 <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
-                  <b-col cols="4">
-                    <b-col cols="12">
+                  <b-col cols="4" :class="[this.mobile ? 'text-center' : 'text-right']">
+                    <b-col>
                       <font-awesome-icon
                         :icon="['fas', 'paper-plane']"
                         class="contact-fa fa-3x mail"
                         id='paper-plane'
                       />
                     </b-col>
-                    <b-col cols="12" class="ico-info">
+                    <b-col class="ico-info">
                       Mail
                     </b-col>
                   </b-col>
-                  <b-col cols="8">
+                  <b-col cols="8" :class="[this.mobile ? 'text-center' : 'text-left']">
                     <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
                   </b-col>
                 </b-row>
                 <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
-                  <b-col cols="4">
-                    <b-col cols="12">
+                  <b-col cols="4" :class="[this.mobile ? 'text-center' : 'text-right']">
+                    <b-col>
                       <font-awesome-icon
                         :icon="['fab', 'linkedin']"
                         class="contact-fa fa-3x linkedin"
                         id='linkedin'
                       />
                     </b-col>
-                    <b-col cols="12" class="ico-info">
+                    <b-col class="ico-info">
                       LinkedIn
                     </b-col>
                   </b-col>
-                  <b-col cols="8">
+                  <b-col cols="8" :class="[this.mobile ? 'text-center' : 'text-left']">
                     <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
                   </b-col>
                 </b-row>
@@ -77,6 +77,12 @@
 <script>
 export default {
   name: 'Contact',
+  props: {
+    mobile: {
+      type: Boolean,
+      default: true,
+    },
+  },
 };
 </script>
 

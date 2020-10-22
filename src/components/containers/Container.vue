@@ -15,7 +15,7 @@
         <Projects></Projects>
       </section>
       <section id="contact">
-        <Contact></Contact>
+        <Contact :mobile="this.mobile"></Contact>
       </section>
     </b-container>
     <FooterCustom></FooterCustom>

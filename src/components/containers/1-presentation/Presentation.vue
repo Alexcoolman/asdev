@@ -23,7 +23,7 @@
               <span>WEB</span><span> Développeur</span><span>👨🏻‍💻</span>
             </h2>
           </b-col>
-          <b-col v-if="this.mobile">
+          <b-col v-if="this.mobile" class="pb-5">
             <div
              :class="[this.mobile ? 'mouse-scroll-bot' : 'mouse-scroll-top', 'mouse-scroll']"></div>
             <span class="text-black">
