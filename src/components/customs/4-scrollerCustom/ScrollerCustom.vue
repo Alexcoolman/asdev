@@ -27,7 +27,7 @@ export default {
       size: 40,
       right: 45,
       maxWidth: 100,
-      bottom: 12.5,
+      bottom: 102,
     };
   },
 };

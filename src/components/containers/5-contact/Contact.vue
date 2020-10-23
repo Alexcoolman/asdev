@@ -19,7 +19,7 @@
               </b-col>
             </b-row>
             <b-row align-h="center" align-v="center">
-              <b-col cols="12" md="7">
+              <b-col cols="12" md="7" :class="[this.mobile ? 'order-last' : 'order-first']">
                 <b-row>
                   <b-col cols="12" class="text-center p-4">
                     <img
@@ -30,9 +30,9 @@
                   </b-col>
                 </b-row>
               </b-col>
-              <b-col cols="12" md="5">
+              <b-col cols="12" md="5" :class="[this.mobile ? 'order-first' : 'order-last']">
                 <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
-                  <b-col cols="4" :class="[this.mobile ? 'text-center' : 'text-right']">
+                  <b-col cols="4" lg="3" class="text-center">
                     <b-col>
                       <font-awesome-icon
                         :icon="['fas', 'paper-plane']"
@@ -44,12 +44,12 @@
                       Mail
                     </b-col>
                   </b-col>
-                  <b-col cols="8" :class="[this.mobile ? 'text-center' : 'text-left']">
+                  <b-col cols="8" lg="9" :class="[this.mobile ? 'text-center' : 'text-left']">
                     <a href="mailto:alexsvry@gmail.com">alexsvry@gmail.com</a>
                   </b-col>
                 </b-row>
                 <b-row class="text-center p-2 contact-content" align-h="center" align-v="center">
-                  <b-col cols="4" :class="[this.mobile ? 'text-center' : 'text-right']">
+                  <b-col cols="4" lg="3" class="text-center">
                     <b-col>
                       <font-awesome-icon
                         :icon="['fab', 'linkedin']"
@@ -61,7 +61,7 @@
                       LinkedIn
                     </b-col>
                   </b-col>
-                  <b-col cols="8" :class="[this.mobile ? 'text-center' : 'text-left']">
+                  <b-col cols="8" lg="9" :class="[this.mobile ? 'text-center' : 'text-left']">
                     <a href="http://www.linkedin.com/in/alexandre-savary/" target="_blank">Alexandre SAVARY</a>
                   </b-col>
                 </b-row>
